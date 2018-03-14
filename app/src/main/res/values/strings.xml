@@ -21,9 +21,11 @@
     <string name="Accesibilidad">Accesibilidad</string>
 
     <string name="image_nav">Imagen Nav Header</string>
+    <string name="title_activity_elegir_metodo">Elegir_metodo</string>
+    <string name="title_activity_idioma">Idioma</string>
+    <string name="title_activity_configuracion">Configuracio</string>
+    <string name="title_activity_aceesibilidad">Aceesibilidad</string>
+    <string name="title_activity_calcula_tu_peso_ideal">Calcula_tu_peso_ideal</string>
 
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="metodo_de_complexion">Metodo de Complexion</string>
 </resources>
