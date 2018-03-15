@@ -61,9 +61,13 @@ public class Calcula_tu_peso_ideal extends AppCompatActivity
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+        drawer.computeScroll();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+       // for (int i = 0; i < navigationView.getChildCount(); i++) {
+         //   navigationView.getChildAt(i).setOverScrollMode(View.OVER_SCROLL_NEVER);
+       // }
     }
     @Override
     public void onBackPressed() {

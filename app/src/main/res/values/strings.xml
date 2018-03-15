@@ -32,5 +32,6 @@
     <string name="metodo_complex">Metodo Complexion</string>
     <string name="title_activity_imc">Indice Masa Corporal</string>
     <string name="title_activity_complexion">Metodo de Complexion</string>
+    <string name="image02">image02</string>
 
 </resources>
