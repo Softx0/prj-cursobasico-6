@@ -30,7 +30,7 @@
     <string name="metodo_imc">Metodo IMC</string>
     <string name="image_IMC">Image IMC</string>
     <string name="metodo_complex">Metodo Complexion</string>
-    <string name="title_activity_imc">Indice Masa Muscular</string>
+    <string name="title_activity_imc">Indice Masa Corporal</string>
     <string name="title_activity_complexion">Metodo de Complexion</string>
 
 </resources>
