@@ -2,6 +2,7 @@ package example.ingva.com.myapplication03;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -22,24 +23,28 @@ public class Calcula_tu_peso_ideal extends AppCompatActivity
     Button boton_idioma;
     Button boton_configuracion;
     Button boton_accesibilidad;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.content_calcula_tu_peso_ideal);
+
+    //    setContentView(R.layout.content_calcula_tu_peso_ideal);
+        setContentView(R.layout.activity_calcula_tu_peso_ideal);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-         boton_calcula = (Button) findViewById(R.id.boton_calcula);
-        boton_calcula.setOnClickListener(this);
+        boton_calcula = (Button) findViewById(R.id.boton_calcula);
+        boton_calcula.setOnClickListener((View.OnClickListener) this);
 
-         boton_idioma = (Button) findViewById(R.id.boton_idioma);
-        boton_idioma.setOnClickListener(this);
+        boton_idioma = (Button) findViewById(R.id.boton_idioma);
+        boton_idioma.setOnClickListener((View.OnClickListener) this);
 
-         boton_configuracion = (Button) findViewById(R.id.boton_configuracion);
-        boton_configuracion.setOnClickListener(this);
+        boton_configuracion = (Button) findViewById(R.id.boton_configuracion);
+        boton_configuracion.setOnClickListener((View.OnClickListener) this);
 
-         boton_accesibilidad = (Button) findViewById(R.id.boton_accesibilidad);
-        boton_accesibilidad.setOnClickListener(this);
+        boton_accesibilidad = (Button) findViewById(R.id.boton_accesibilidad);
+        boton_accesibilidad.setOnClickListener((View.OnClickListener) this);
 
 
      /*   FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -50,7 +55,7 @@ public class Calcula_tu_peso_ideal extends AppCompatActivity
                         .setAction("Action", null).show();
             }
         });*/
-/*
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -58,9 +63,8 @@ public class Calcula_tu_peso_ideal extends AppCompatActivity
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);*/
+        navigationView.setNavigationItemSelectedListener(this);
     }
-/*
     @Override
     public void onBackPressed() {
 
@@ -70,7 +74,7 @@ public class Calcula_tu_peso_ideal extends AppCompatActivity
         } else {
             super.onBackPressed();
         }
-    }*/
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -94,35 +98,35 @@ public class Calcula_tu_peso_ideal extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
+        @SuppressWarnings("StatementWithEmptyBody")
+        @Override
+        public boolean onNavigationItemSelected (MenuItem item){
+            // Handle navigation view item clicks here.
+            int id = item.getItemId();
 
-        if (id == R.id.nav_accesibility) {
-            // Handle the camera action
-        } else if (id == R.id.nav_donation) {
+            if (id == R.id.nav_accesibility) {
+                // Handle the camera action
+            } else if (id == R.id.nav_donation) {
 
-        } else if (id == R.id.nav_help) {
+            } else if (id == R.id.nav_help) {
 
-        } else if (id == R.id.nav_share) {
+            } else if (id == R.id.nav_share) {
 
-        } else if (id == R.id.nav_send) {
+            } else if (id == R.id.nav_send) {
 
-        } else if (id == R.id.nav_about_us) {
+            } else if (id == R.id.nav_about_us) {
 
-        } else if (id == R.id.nav_comment){
+            } else if (id == R.id.nav_comment) {
 
+            }
+            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            drawer.closeDrawer(GravityCompat.START);
+            return true;
         }
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
-    }
 
-    @Override
-    public void onClick(View view) {
-        switch(view.getId()){
+        @Override
+        public void onClick (View view){
+       switch(view.getId()){
             case R.id.boton_calcula:
             Intent btn_calcula = new Intent(Calcula_tu_peso_ideal.this, Elegir_metodo.class);
             startActivity(btn_calcula);
@@ -143,5 +147,5 @@ public class Calcula_tu_peso_ideal extends AppCompatActivity
             startActivity(btn_accesibilidad);
             break;
         }
+        }
     }
-}

@@ -20,6 +20,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".Elegir_metodo"
             android:label="@string/title_activity_elegir_metodo"
@@ -30,6 +31,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".Idioma"
             android:label="@string/title_activity_idioma"
@@ -40,6 +42,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".Configuracion"
             android:label="@string/title_activity_configuracion"
@@ -50,6 +53,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".Aceesibilidad"
             android:label="@string/title_activity_aceesibilidad"
@@ -60,6 +64,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".Calcula_tu_peso_ideal"
             android:label="@string/title_activity_calcula_tu_peso_ideal"
@@ -70,6 +75,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".imc"
+            android:label="@string/title_activity_imc"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        <intent-filter>
+            <action android:name="android.intent.action.sextapantalla" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".complexion"
+            android:label="@string/title_activity_complexion"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.septimapantalla" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>

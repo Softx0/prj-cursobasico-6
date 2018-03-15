@@ -8,10 +8,115 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
-    <include
-        layout="@layout/app_bar_main"
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="example.ingva.com.myapplication03.Elegir_metodo"
+        >
+
+       <!-- <include
+            layout="@layout/app_bar_main"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/include">
+
+        </include>-->
+
+
+        <ImageButton
+            android:id="@+id/imageIMC"
+            android:layout_width="192dp"
+            android:layout_height="134dp"
+            android:layout_below="@+id/include"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="68dp"
+            android:background="@drawable/fondo_image_imc"
+            android:contentDescription="@string/image_IMC"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/include"
+            app:srcCompat="@drawable/imc"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btn_imc1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/color_back_nav"
+            android:gravity="bottom"
+            android:text="@string/metodo_imc"
+            android:textColor="@color/black_nigga"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageIMC"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:id="@+id/linear_container_complex"
+            android:layout_width="match_parent"
+            android:layout_height="194dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="44dp"
+            android:background="@drawable/fondo_image_complex"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_imc1"
+            tools:ignore="MissingConstraints">
+
+            <ImageButton
+                android:id="@+id/imageComplexion"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="36dp"
+                android:background="@color/color_back_nav"
+                android:contentDescription="@string/image_IMC"
+                android:paddingTop="@dimen/nav_header_vertical_spacing"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linear_container_complex"
+                app:srcCompat="@drawable/complexion"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_complex1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/color_back_nav"
+            android:gravity="bottom"
+            android:text="@string/metodo_complex"
+            android:textColor="@color/black_nigga"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear_container_complex"
+            tools:ignore="MissingConstraints" />
+    </android.support.constraint.ConstraintLayout>
 
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"

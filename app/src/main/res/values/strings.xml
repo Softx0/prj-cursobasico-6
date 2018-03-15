@@ -21,11 +21,16 @@
     <string name="Accesibilidad">Accesibilidad</string>
 
     <string name="image_nav">Imagen Nav Header</string>
-    <string name="title_activity_elegir_metodo">Elegir_metodo</string>
+    <string name="title_activity_elegir_metodo">Elegir Metodo</string>
     <string name="title_activity_idioma">Idioma</string>
-    <string name="title_activity_configuracion">Configuracio</string>
-    <string name="title_activity_aceesibilidad">Aceesibilidad</string>
-    <string name="title_activity_calcula_tu_peso_ideal">Calcula_tu_peso_ideal</string>
+    <string name="title_activity_configuracion">Configuracion</string>
+    <string name="title_activity_aceesibilidad">Accesibilidad</string>
+    <string name="title_activity_calcula_tu_peso_ideal">Calcula tu peso Ideal</string>
 
+    <string name="metodo_imc">Metodo IMC</string>
+    <string name="image_IMC">Image IMC</string>
+    <string name="metodo_complex">Metodo Complexion</string>
+    <string name="title_activity_imc">Indice Masa Muscular</string>
+    <string name="title_activity_complexion">Metodo de Complexion</string>
 
 </resources>

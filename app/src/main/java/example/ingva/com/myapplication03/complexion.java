@@ -1,6 +1,5 @@
 package example.ingva.com.myapplication03;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,37 +12,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.ImageButton;
 
-public class Elegir_metodo extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
-
-    ImageButton imageIMC, imageComplexion;
-    Button btn_imc1, btn_complex1;
+public class complexion extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_elegir_metodo);
-      //  setContentView(R.layout.content_elegir_metodo);
-
+        setContentView(R.layout.activity_complexion);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        imageIMC = (ImageButton) findViewById(R.id.imageIMC);
-        imageIMC.setOnClickListener((View.OnClickListener) this);
-
-        btn_imc1 = (Button) findViewById(R.id.btn_imc1);
-        btn_imc1.setOnClickListener((View.OnClickListener) this);
-
-        imageComplexion = (ImageButton) findViewById(R.id.imageComplexion);
-        imageComplexion.setOnClickListener((View.OnClickListener) this);
-
-        btn_complex1 = (Button) findViewById(R.id.btn_complex1);
-        btn_complex1.setOnClickListener((View.OnClickListener) this);
-
-     /*     FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+    /*    FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -119,24 +99,5 @@ public class Elegir_metodo extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()){
-
-            case R.id.imageIMC:
-            case R.id.btn_imc1:
-                Intent intent_imageIMC = new Intent(Elegir_metodo.this, imc.class);
-                startActivity(intent_imageIMC);
-                break;
-
-            case R.id.imageComplexion:
-            case R.id.btn_complex1:
-                Intent intent_imageComplex = new Intent(Elegir_metodo.this, complexion.class);
-                startActivity(intent_imageComplex);
-                break;
-
-        }
     }
 }
