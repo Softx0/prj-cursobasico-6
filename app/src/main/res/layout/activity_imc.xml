@@ -26,6 +26,19 @@
         >
 
 
+        <TextView
+            android:id="@+id/peso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|center_vertical"
+            android:text="@string/peso_imc1"
+            android:textColor="@color/black_nigga"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="145dp" />
+<!--
         <Button
             android:id="@+id/btn_complex1"
             android:layout_width="wrap_content"
@@ -44,7 +57,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/app"
             tools:ignore="MissingConstraints" />
-
+-->
     </android.support.constraint.ConstraintLayout>
 
     <android.support.design.widget.NavigationView

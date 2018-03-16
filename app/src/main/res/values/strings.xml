@@ -9,6 +9,7 @@
     <string name="contact_us">Contactanos</string>
     <string name="more">More</string>
 
+    <string name="peso_imc1">Peso:</string>
     <string name="about_us">Sobre Nosotros</string>
     <string name="accesibility">Accesibilidad</string>
     <string name="donation">Donacion</string>
@@ -33,5 +34,43 @@
     <string name="title_activity_imc">Indice Masa Corporal</string>
     <string name="title_activity_complexion">Metodo de Complexion</string>
     <string name="image02">image02</string>
+
+    <string name="peso_imc">Peso:</string>
+    <string name="sexo_complexion">Sexo:</string>
+    <string name="titulo_complexion">Método de Complexión</string>
+    <string name="masculino_complex">Masculino</string>
+    <string name="femenino_complex">Femenino</string>
+    <string name="muñeca">Muñeca:</string>
+    <string name="estatura_complexion">Estatura:</string>
+    <string name="cm">CM</string>
+    <string name="_90">ej: 90</string>
+    <string name="calcular_tu_peso">Calcular tu peso</string>
+
+    <string-array name="spinner_estatura_cm">
+        <item>Seleccione [cm]</item>
+        <item>1.50</item>
+        <item>1.52</item>
+        <item>1.54</item>
+        <item>1.56</item>
+        <item>1.58</item>
+        <item>1.60</item>
+        <item>1.62</item>
+        <item>1.64</item>
+        <item>1.66</item>
+        <item>1.68</item>
+        <item>1.70</item>
+        <item>1.72</item>
+        <item>1.74</item>
+        <item>1.76</item>
+        <item>1.78</item>
+        <item>1.80</item>
+        <item>1.82</item>
+        <item>1.84</item>
+        <item>1.86</item>
+        <item>1.88</item>
+        <item>1.90</item>
+        <item>1.92</item>
+        <item>1.94</item>
+    </string-array>
 
 </resources>
