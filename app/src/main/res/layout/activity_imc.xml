@@ -26,12 +26,11 @@
         >
 
         <ImageButton
-            android:id="@+id/imageIMC02"
+            android:id="@+id/imageIMC"
             android:layout_width="252dp"
             android:layout_height="155dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="64dp"
-
             android:background="@drawable/fondo_image_imc"
             android:contentDescription="@string/image_IMC"
             android:paddingTop="@dimen/nav_header_vertical_spacing"
@@ -53,7 +52,7 @@
             android:textColor="@color/black_nigga"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageIMC02" />
+            app:layout_constraintTop_toBottomOf="@+id/imageIMC" />
 
         <LinearLayout
             android:id="@+id/layout1"
