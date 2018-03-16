@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/imc_table">
+
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="286dp"
+        android:layout_height="339dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="110dp">
+
+
+        <TableRow>
+
+            <TextView
+
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:padding="3dip"
+                android:text="@string/menor_a_18_5"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+
+                android:textSize="22sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="3dip"
+                android:text="@string/peso_insuficiente" />
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:padding="3dip"
+                android:text="@string/_18_5_24_9"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="3dip"
+                android:text="@string/peso_normal" />
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:padding="3dip"
+                android:text="@string/_25_26_9"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="3dip"
+                android:text="@string/sobrepeso_grado_i" />
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:padding="3dip"
+                android:text="@string/_27_29_9"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:padding="3dip"
+                android:text="@string/preobesidad" />
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:padding="3dip"
+                android:text="@string/_30_34_9"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:padding="3dip"
+                android:text="@string/obesidad_leve" />
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:padding="3dip"
+                android:text="@string/_35_39_9"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:padding="3dip"
+                android:text="@string/obesidad_moderada" />
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:padding="3dip"
+                android:text="@string/_40_19_9"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:padding="3dip"
+                android:text="@string/obesidad_m_rbida" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:padding="3dip"
+                android:text="@string/_50"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:padding="3dip"
+                android:text="@string/obesidad_extrema" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tala_imc_status"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</android.support.constraint.ConstraintLayout>

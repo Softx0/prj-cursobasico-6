@@ -28,13 +28,6 @@
     <string name="title_activity_aceesibilidad">Accesibilidad</string>
     <string name="title_activity_calcula_tu_peso_ideal">Calcula tu peso Ideal</string>
 
-    <string name="metodo_imc">Metodo IMC</string>
-    <string name="image_IMC">Image IMC</string>
-    <string name="metodo_complex">Metodo Complexion</string>
-    <string name="title_activity_imc">Indice Masa Corporal</string>
-    <string name="title_activity_complexion">Metodo de Complexion</string>
-    <string name="image02">image02</string>
-
     <string name="peso_imc">Peso:</string>
     <string name="sexo_complexion">Sexo:</string>
     <string name="titulo_complexion">Método de Complexión</string>
@@ -45,6 +38,36 @@
     <string name="cm">CM</string>
     <string name="_90">ej: 90</string>
     <string name="calcular_tu_peso">Calcular tu peso</string>
+
+    <string name="metodo_imc">Metodo IMC</string>
+    <string name="image_IMC">Image IMC</string>
+    <string name="metodo_complex">Metodo Complexion</string>
+    <string name="title_activity_imc">Indice Masa Corporal</string>
+    <string name="title_activity_complexion">Metodo de Complexion</string>
+    <string name="image02">image02</string>
+    <string name="ingresa_datos">Ingresa los siguientes datos:</string>
+    <string name="altura">Estatura:</string>
+    <string name="peso">Peso:</string>
+    <string name="calcular">Calcular tu peso</string>
+    <string name="tala_imc_status">Informacion IMC</string>
+    <string name="menor_a_18_5">Menor a 18,5:</string>
+    <string name="peso_insuficiente">Peso insuficiente</string>
+    <string name="_18_5_24_9">18,5–24,9:</string>
+    <string name="peso_normal">Peso normal</string>
+    <string name="_25_26_9">25–26,9:</string>
+    <string name="sobrepeso_grado_i">Sobrepeso grado I</string>
+    <string name="_27_29_9">27 – 29,9:</string>
+    <string name="preobesidad">Preobesidad</string>
+    <string name="_30_34_9">30 – 34,9:</string>
+    <string name="obesidad_leve">Obesidad leve</string>
+    <string name="_35_39_9">35 – 39,9:</string>
+    <string name="obesidad_moderada">Obesidad moderada</string>
+    <string name="_40_19_9">40 – 19,9:</string>
+    <string name="obesidad_m_rbida">Obesidad mórbida</string>
+    <string name="_50"><![CDATA[> 50:]]></string>
+    <string name="obesidad_extrema">Obesidad extrema</string>
+    <string name="m">M</string>
+    <string name="kg">KG</string>
 
     <string-array name="spinner_estatura_cm">
         <item>Seleccione [cm]</item>

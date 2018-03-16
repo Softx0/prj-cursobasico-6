@@ -25,39 +25,149 @@
 
         >
 
+        <ImageButton
+            android:id="@+id/imageIMC02"
+            android:layout_width="252dp"
+            android:layout_height="155dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="64dp"
+
+            android:background="@drawable/fondo_image_imc"
+            android:contentDescription="@string/image_IMC"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/imc2"
+            tools:ignore="MissingConstraints" />
+
 
         <TextView
-            android:id="@+id/peso"
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center|center_vertical"
-            android:text="@string/peso_imc1"
-            android:textColor="@color/black_nigga"
-            android:textSize="30sp"
+            android:layout_height="57dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/ingresa_datos"
+            android:textSize="25sp"
             android:textStyle="bold"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="145dp" />
-<!--
+            android:textColor="@color/black_nigga"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageIMC02" />
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="77dp"
+
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="30dp"
+                android:layout_weight="2"
+                android:textStyle="bold"
+                android:textColor="@color/black_nigga"
+                android:text="@string/altura"
+                android:textSize="25sp" />
+
+            <Spinner
+                android:id="@+id/spinner_altura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/cm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|right"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textColor="@color/black_nigga"
+                android:text="@string/m"
+                android:textSize="25sp"
+                tools:ignore="RtlHardcoded" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="77dp"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout1">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="30dp"
+                android:layout_weight="2"
+
+                android:text="@string/peso"
+                android:textColor="@color/black_nigga"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner_peso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/kg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|right"
+                android:layout_weight="1"
+                android:text="@string/kg"
+                android:textColor="@color/black_nigga"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                tools:ignore="RtlHardcoded" />
+
+
+        </LinearLayout>
+
         <Button
-            android:id="@+id/btn_complex1"
+            android:id="@+id/btn_imc"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="42dp"
             android:layout_gravity="center"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="228dp"
-            android:background="@color/colorAccent"
-            android:gravity="bottom"
-            android:text="klk ya llegaste"
+            android:background="@drawable/boton_border_circle"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/calcular"
             android:textColor="@color/black_nigga"
-            android:textSize="30sp"
-            android:textStyle="italic"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/app"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
             tools:ignore="MissingConstraints" />
--->
+
     </android.support.constraint.ConstraintLayout>
 
     <android.support.design.widget.NavigationView
