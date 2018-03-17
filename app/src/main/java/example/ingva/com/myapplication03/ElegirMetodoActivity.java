@@ -1,77 +1,47 @@
 package example.ingva.com.myapplication03;
 
-import android.annotation.SuppressLint;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.Spinner;
-import android.widget.Toast;
+import android.widget.ImageButton;
 
-public class imc extends AppCompatActivity
+public class ElegirMetodoActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
-    private Spinner alturaSpinner;
-    private Float[] dataAltura = new Float[101];
-    private Spinner pesoSpinner;
-    private Integer[] dataPeso = new Integer[101];
-    private Button calcular;
-    private View layout_table_imc;
+    ImageButton imageIMC, imageComplexion;
+    Button btn_imc1, btn_complex1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_imc);
+        setContentView(R.layout.activity_elegir_metodo);
+      //  setContentView(R.layout.content_elegir_metodo);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        for (int i = 0; i <= 100; i++){
-            dataAltura[i] = (float)(i + 150.00)/100 ;
-        }
+        imageIMC = (ImageButton) findViewById(R.id.imageIMC);
+        imageIMC.setOnClickListener((View.OnClickListener) this);
 
-        for (int i = 0; i <= 100; i++){
-            dataPeso[i] = i + 40;
-        }
+        btn_imc1 = (Button) findViewById(R.id.btn_imc1);
+        btn_imc1.setOnClickListener((View.OnClickListener) this);
 
+        imageComplexion = (ImageButton) findViewById(R.id.imageComplexion);
+        imageComplexion.setOnClickListener((View.OnClickListener) this);
 
-        alturaSpinner = (Spinner) findViewById(R.id.spinner_altura);
-        ArrayAdapter<Float> adapterAltura = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, dataAltura);
-        adapterAltura.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        btn_complex1 = (Button) findViewById(R.id.btn_complex1);
+        btn_complex1.setOnClickListener((View.OnClickListener) this);
 
-        alturaSpinner.setAdapter(adapterAltura);
-
-
-        pesoSpinner = (Spinner) findViewById(R.id.spinner_peso);
-        ArrayAdapter<Integer> adapterPeso = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, dataPeso);
-        adapterPeso.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        pesoSpinner.setAdapter(adapterPeso);
-
-        calcular = (Button) findViewById(R.id.btn_imc) ;
-        calcular.setOnClickListener(this);
-
-        //Creating the LayoutInflater instance
-        LayoutInflater li = getLayoutInflater();
-        //Getting the View object as defined in the customtoast.xml file
-        layout_table_imc = li.inflate(R.layout.imc_layout, (ViewGroup) findViewById(R.id.imc_table));
-
-
-/*
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+     /*     FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -130,7 +100,7 @@ public class imc extends AppCompatActivity
 
         Intent main = new Intent(getApplicationContext(),MainActivity.class);
 
-         if (id == R.id.nav_donation) {
+        if (id == R.id.nav_donation) {
             FragmentsIds.setId("nav_donation");
 
         } else if (id == R.id.nav_help) {
@@ -155,39 +125,22 @@ public class imc extends AppCompatActivity
         return true;
     }
 
-    @SuppressLint({"WrongConstant", "DefaultLocale"})
     @Override
     public void onClick(View view) {
-        StringBuilder text = new StringBuilder();
+        switch (view.getId()){
 
-        float altura = Float.valueOf(alturaSpinner.getSelectedItem().toString());
+            case R.id.imageIMC:
+            case R.id.btn_imc1:
+                Intent intent_imageIMC = new Intent(ElegirMetodoActivity.this, ImcActivity.class);
+                startActivity(intent_imageIMC);
+                break;
 
-        int peso = Integer.valueOf(pesoSpinner.getSelectedItem().toString());
+            case R.id.imageComplexion:
+            case R.id.btn_complex1:
+                Intent intent_imageComplex = new Intent(ElegirMetodoActivity.this, ComplexionActivity.class);
+                startActivity(intent_imageComplex);
+                break;
 
-        float imc = peso/(altura*altura);
-        text.append("Su IMC es: ");
-        text.append(String.format("%.2f", imc));
-
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        //Uncomment the below code to Set the message and title from the strings.xml file
-        //builder.setMessage(R.string.dialog_message) .setTitle(R.string.dialog_title);
-
-        //Setting message manually and performing action on button click
-        builder.setMessage(text)
-                .setCancelable(false)
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        finish();
-                    }
-                }).setView(layout_table_imc)
-                .setNeutralButton("Atrás", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        finish();
-                    }
-                })
-                .setTitle("Indice de masa corporal");
-        builder.show();
+        }
     }
 }

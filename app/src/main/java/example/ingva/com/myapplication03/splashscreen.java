@@ -15,9 +15,9 @@ public class splashscreen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent mostrarLaOtra = new Intent(splashscreen.this, Calcula_tu_peso_ideal.class);
+                Intent mostrarLaOtra = new Intent(splashscreen.this, CalculaPesoIdeal.class);
                 startActivity(mostrarLaOtra);
             }
-        },4000);
+        },2000);
     }
 }

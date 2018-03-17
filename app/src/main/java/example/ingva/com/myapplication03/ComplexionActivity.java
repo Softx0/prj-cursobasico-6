@@ -4,12 +4,8 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.annotation.RequiresApi;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -19,7 +15,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,7 +24,7 @@ import android.widget.Spinner;
 
 import java.util.Objects;
 
-public class complexion extends AppCompatActivity
+public class ComplexionActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     Spinner spinner;
@@ -95,30 +90,30 @@ public class complexion extends AppCompatActivity
                 String la_muneca = editText_complexion.getText().toString();
                 Float muneca02 = Float.parseFloat(la_muneca);
 
-                //Formula para la complexion de la muneca
+                //Formula para la ComplexionActivity de la muneca
                 double complexion = altura/muneca02;
 
                  //Empieza la Magia
                 if(Objects.equals(text, "Masculino")){
                     if (complexion < 9.6 && altura > 155 && altura <= 157) { //GRANDE 1
 
-                        AlertDialog.Builder builder = new AlertDialog.Builder(complexion.this);
+                        AlertDialog.Builder builder = new AlertDialog.Builder(ComplexionActivity.this);
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 57-64 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
                         alertDialog.show();
 
                     }
-                    AlertDialog.Builder builder = new AlertDialog.Builder(complexion.this);
+                    AlertDialog.Builder builder = new AlertDialog.Builder(ComplexionActivity.this);
 
                     if (complexion < 9.6 && altura > 157 && altura <= 160) { //GRANDE 2
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 59-66 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -130,7 +125,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 60-67 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -142,7 +137,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 61-69 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -154,7 +149,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 63-71 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -166,7 +161,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 65-73 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -179,7 +174,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 67-75 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -191,7 +186,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 69-77 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -203,7 +198,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 71-79 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -215,7 +210,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 72-81 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -227,7 +222,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 75-84 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -240,7 +235,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 76-86 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -253,7 +248,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 79-88 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -266,7 +261,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 88-91 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -279,7 +274,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 83-94 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -291,7 +286,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 54-59 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -303,7 +298,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 55-60 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -315,7 +310,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 56-62 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -327,7 +322,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 58-63 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -339,7 +334,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 59-65 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -351,7 +346,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 61-67 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -364,7 +359,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 63-69 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -376,7 +371,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 65-71 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -388,7 +383,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 66-73 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -400,7 +395,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 68-75 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -412,7 +407,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 70-77 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -425,7 +420,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 72-80 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -438,7 +433,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 74-82 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -451,7 +446,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 76-84 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -464,7 +459,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 78-86 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -476,7 +471,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 51-55 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -488,7 +483,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 52-56 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -500,7 +495,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 54-57 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -512,7 +507,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 55-59 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -524,7 +519,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 56-60 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -536,7 +531,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 58-62 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -549,7 +544,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 60-64 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -561,7 +556,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 62-66 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -573,7 +568,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 64-68 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -585,7 +580,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 66-70 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -597,7 +592,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 67-72 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -610,7 +605,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 69-74 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -623,7 +618,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 71-76 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -636,7 +631,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 73-78 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -649,7 +644,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 75-80 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -660,13 +655,13 @@ public class complexion extends AppCompatActivity
 
                 if (Objects.equals(text, "Femenino")) { //MUJER
 
-                    AlertDialog.Builder builder = new AlertDialog.Builder(complexion.this);
+                    AlertDialog.Builder builder = new AlertDialog.Builder(ComplexionActivity.this);
 
                     if (complexion < 10 && altura > 145 && altura <= 147) { //GRANDE 1
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 45-54 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -678,7 +673,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 48-56 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -690,7 +685,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 50-58 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -702,7 +697,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 51-59 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -714,7 +709,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 52-60 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -726,7 +721,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 64-61 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -739,7 +734,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 55-63 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -751,7 +746,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 57-65 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -763,7 +758,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 58-66 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -775,7 +770,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 60-68 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -787,7 +782,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 62-70 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -800,7 +795,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 64-72 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -813,7 +808,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 66-74 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -826,7 +821,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 67-76 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -839,7 +834,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 70-79 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -851,7 +846,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 44-49 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -863,7 +858,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 45-50 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -875,7 +870,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 46-51 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -887,7 +882,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 47-53 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -899,7 +894,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 49-54 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -911,7 +906,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 50-56 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -924,7 +919,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 51-57 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -936,7 +931,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 53-59 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -948,7 +943,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 55-61 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -960,7 +955,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 56-63 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -972,7 +967,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 58-65 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -985,7 +980,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 60-67 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -998,7 +993,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 62-69 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -1011,7 +1006,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 64-71 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -1024,7 +1019,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 66-73 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -1036,7 +1031,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 42-45 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -1048,7 +1043,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 43-46 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -1060,7 +1055,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 44-47 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -1072,7 +1067,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 45-49 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -1084,7 +1079,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 46-50 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -1096,7 +1091,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 48-51 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -1109,7 +1104,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 49-53 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -1121,7 +1116,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 51-54 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -1133,7 +1128,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 52-56 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -1145,7 +1140,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 54-58 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -1157,7 +1152,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 56-60 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -1170,7 +1165,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 57-61 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -1183,7 +1178,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 59-64 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -1196,7 +1191,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 61-66 Kgs.");
 
                         AlertDialog alertDialog = builder.create();
@@ -1209,7 +1204,7 @@ public class complexion extends AppCompatActivity
 
                         builder.setIcon(R.drawable.ic_peso04)
 
-                                .setTitle("Tu peso ideal según tu complexion")
+                                .setTitle("Tu peso ideal según tu ComplexionActivity")
                                 .setMessage("Tu peso ideal se encuentra entre 63-67 Kgs.");
 
                         AlertDialog alertDialog = builder.create();

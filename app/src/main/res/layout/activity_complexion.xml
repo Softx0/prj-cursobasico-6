@@ -22,7 +22,7 @@
         android:layout_height="match_parent"
         android:id="@+id/app02"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:context="example.ingva.com.myapplication03.complexion"
+        tools:context="example.ingva.com.myapplication03.ComplexionActivity"
         >
 
         <LinearLayout

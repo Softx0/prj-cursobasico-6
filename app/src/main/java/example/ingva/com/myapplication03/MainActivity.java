@@ -134,11 +134,11 @@ public class MainActivity extends AppCompatActivity
     public void onClick(View view) {
         switch(view.getId()){
             case R.id.boton_calcula:
-                Intent btn_calcula = new Intent(MainActivity.this, Elegir_metodo.class);
+                Intent btn_calcula = new Intent(MainActivity.this, ElegirMetodoActivity.class);
                 startActivity(btn_calcula);
                 break;
             case R.id.boton_idioma:
-                Intent btn_idioma = new Intent(MainActivity.this, Idioma.class);
+                Intent btn_idioma = new Intent(MainActivity.this, IdiomaActivity.class);
                 startActivity(btn_idioma);
                 break;
             case R.id.boton_configuracion:

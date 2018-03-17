@@ -14,36 +14,44 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
-import android.widget.ImageButton;
 
-public class Elegir_metodo extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
+public class IdiomaActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
 
-    ImageButton imageIMC, imageComplexion;
-    Button btn_imc1, btn_complex1;
+    Button aceptar_idioma;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_elegir_metodo);
-      //  setContentView(R.layout.content_elegir_metodo);
-
+        setContentView(R.layout.activity_idioma);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        imageIMC = (ImageButton) findViewById(R.id.imageIMC);
-        imageIMC.setOnClickListener((View.OnClickListener) this);
+        aceptar_idioma = (Button) findViewById(R.id.aceptar_idioma);
 
-        btn_imc1 = (Button) findViewById(R.id.btn_imc1);
-        btn_imc1.setOnClickListener((View.OnClickListener) this);
+        intent = new Intent(Intent.ACTION_MAIN);
+        intent.setClassName("com.android.settings", "com.android.settings.LanguageSettings");
 
-        imageComplexion = (ImageButton) findViewById(R.id.imageComplexion);
-        imageComplexion.setOnClickListener((View.OnClickListener) this);
+        aceptar_idioma.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-        btn_complex1 = (Button) findViewById(R.id.btn_complex1);
-        btn_complex1.setOnClickListener((View.OnClickListener) this);
+                startActivity(intent);
+            }
+        });
 
-     /*     FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
+
+
+
+
+
+
+
+
+
+   /*     FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -125,24 +133,5 @@ public class Elegir_metodo extends AppCompatActivity
         startActivity(main);
 
         return true;
-    }
-
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()){
-
-            case R.id.imageIMC:
-            case R.id.btn_imc1:
-                Intent intent_imageIMC = new Intent(Elegir_metodo.this, imc.class);
-                startActivity(intent_imageIMC);
-                break;
-
-            case R.id.imageComplexion:
-            case R.id.btn_complex1:
-                Intent intent_imageComplex = new Intent(Elegir_metodo.this, complexion.class);
-                startActivity(intent_imageComplex);
-                break;
-
-        }
     }
 }

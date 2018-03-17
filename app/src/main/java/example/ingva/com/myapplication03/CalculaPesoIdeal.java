@@ -2,9 +2,6 @@ package example.ingva.com.myapplication03;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,7 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
-public class Calcula_tu_peso_ideal extends AppCompatActivity
+public class CalculaPesoIdeal extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
     Button boton_calcula;
@@ -139,23 +136,23 @@ public class Calcula_tu_peso_ideal extends AppCompatActivity
         public void onClick (View view){
        switch(view.getId()){
             case R.id.boton_calcula:
-            Intent btn_calcula = new Intent(Calcula_tu_peso_ideal.this, Elegir_metodo.class);
+            Intent btn_calcula = new Intent(CalculaPesoIdeal.this, ElegirMetodoActivity.class);
             startActivity(btn_calcula);
             break;
 
             case R.id.boton_idioma:
-            Intent btn_idioma = new Intent(Calcula_tu_peso_ideal.this, Idioma.class);
+            Intent btn_idioma = new Intent(CalculaPesoIdeal.this, IdiomaActivity.class);
             startActivity(btn_idioma);
             break;
 
            case R.id.boton_configuracion:
-               Intent btn_configuracion = new Intent(Calcula_tu_peso_ideal.this, MainActivity.class);
+               Intent btn_configuracion = new Intent(CalculaPesoIdeal.this, MainActivity.class);
                FragmentsIds.setId("null");
                startActivity(btn_configuracion);
                break;
 
            case R.id.boton_accesibilidad:
-               Intent btn_accesibilidad = new Intent(Calcula_tu_peso_ideal.this, MainActivity.class);
+               Intent btn_accesibilidad = new Intent(CalculaPesoIdeal.this, MainActivity.class);
                FragmentsIds.setId("null");
                startActivity(btn_accesibilidad);
                break;

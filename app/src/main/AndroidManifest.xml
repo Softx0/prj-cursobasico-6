@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="example.ingva.com.myapplication03">
 
     <application
@@ -21,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Elegir_metodo"
+            android:name=".ElegirMetodoActivity"
             android:label="@string/title_activity_elegir_metodo"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -31,7 +30,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Idioma"
+            android:name=".IdiomaActivity"
             android:label="@string/title_activity_idioma"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -61,7 +60,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Calcula_tu_peso_ideal"
+            android:name=".CalculaPesoIdeal"
             android:label="@string/title_activity_calcula_tu_peso_ideal"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -71,7 +70,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".imc"
+            android:name=".ImcActivity"
             android:label="@string/title_activity_imc"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -81,7 +80,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".complexion"
+            android:name=".ComplexionActivity"
             android:label="@string/title_activity_complexion"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

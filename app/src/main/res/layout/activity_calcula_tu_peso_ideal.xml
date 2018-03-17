@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:overScrollMode="always"
-    tools:context="example.ingva.com.myapplication03.Calcula_tu_peso_ideal"
+    tools:context="example.ingva.com.myapplication03.CalculaPesoIdeal"
     tools:openDrawer="start">
 
     <include
@@ -24,7 +24,7 @@
         android:layout_height="match_parent"
         android:overScrollMode="always"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:context="example.ingva.com.myapplication03.Calcula_tu_peso_ideal"
+        tools:context="example.ingva.com.myapplication03.CalculaPesoIdeal"
         android:id="@+id/content_main">
 
 
