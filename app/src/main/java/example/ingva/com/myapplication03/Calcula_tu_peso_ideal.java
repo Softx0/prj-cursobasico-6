@@ -27,8 +27,8 @@ public class Calcula_tu_peso_ideal extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     //    setContentView(R.layout.content_calcula_tu_peso_ideal);
+
         setContentView(R.layout.activity_calcula_tu_peso_ideal);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
