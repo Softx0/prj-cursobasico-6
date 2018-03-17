@@ -1,0 +1,34 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="example.ingva.com.myapplication03.ConstruccionFragment"
+    android:background="@color/color_back_nav">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout_linear"
+        android:background="@color/color_back_nav"
+        >
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="257dp"
+            android:layout_height="249dp"
+            android:layout_gravity="center"
+
+            android:layout_marginTop="124dp"
+            android:contentDescription="@string/todo"
+            android:cropToPadding="true"
+            android:src="@mipmap/constr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>

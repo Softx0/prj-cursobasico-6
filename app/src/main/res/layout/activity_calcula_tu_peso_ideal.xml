@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:overScrollMode="always"
-    tools:context="example.ingva.com.myapplication03.Calcula_tu_peso_ideal"
+    tools:context="example.ingva.com.myapplication03.CalculaPesoIdeal"
     tools:openDrawer="start">
 
     <include
@@ -24,7 +24,7 @@
         android:layout_height="match_parent"
         android:overScrollMode="always"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:context="example.ingva.com.myapplication03.Calcula_tu_peso_ideal"
+        tools:context="example.ingva.com.myapplication03.CalculaPesoIdeal"
         android:id="@+id/content_main">
 
 
@@ -36,25 +36,14 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
 
-            android:layout_marginTop="68dp"
+            android:layout_marginTop="60dp"
+            android:contentDescription="@string/image02"
             android:paddingTop="@dimen/nav_header_vertical_spacing"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/peso_ideal" android:contentDescription="@string/image02" />
-        <!--
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-         -->
-
-
+            app:srcCompat="@drawable/peso2" />
 
         <Button
             android:id="@+id/boton_calcula"
@@ -62,7 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="48dp"
             android:background="@drawable/boton_border_circle"
             android:gravity="center|center_horizontal"
             android:text="@string/calcula"

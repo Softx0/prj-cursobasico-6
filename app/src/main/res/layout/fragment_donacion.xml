@@ -1,0 +1,160 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="example.ingva.com.myapplication03.DonacionFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/donacion_layout"
+        android:background="@color/color_back_nav">
+
+        <ImageView
+            android:id="@+id/image_donacion_id"
+            android:layout_width="248dp"
+            android:layout_height="155dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+
+            android:layout_marginTop="72dp"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:src="@drawable/donation2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/donacion_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/donacion"
+            android:textColor="@color/black_nigga"
+            android:textColorHint="@color/colorAccent"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.44"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_donacion_id"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/donacion_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/text_donacion"
+            android:textColor="@color/black_nigga"
+            android:textColorHint="@color/colorAccent"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/donacion_"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/donacion_monto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/donacion_monto"
+            android:textColor="@color/black_nigga"
+            android:textColorHint="@color/colorAccent"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/donacion_text"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/editText_donacion_email"
+            android:layout_width="95dp"
+            android:layout_height="39dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:hint="@string/ej_50_000"
+            android:inputType="numberDecimal"
+            android:maxLength="11"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.661"
+            app:layout_constraintStart_toEndOf="@+id/donacion_monto"
+            app:layout_constraintTop_toBottomOf="@+id/donacion_text"
+            tools:ignore="MissingConstraints,RtlHardcoded,TextFields" />
+
+        <TextView
+            android:id="@+id/donacion_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="28dp"
+            android:gravity="center"
+            android:text="@string/e_mail"
+            android:textColor="@color/black_nigga"
+            android:textColorHint="@color/colorAccent"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/donacion_monto"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/editText_donacion_monto"
+            android:layout_width="wrap_content"
+            android:layout_height="39dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:hint="@string/ej_com"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.805"
+            app:layout_constraintStart_toEndOf="@+id/donacion_email"
+            app:layout_constraintTop_toBottomOf="@+id/editText_donacion_email"
+            tools:ignore="MissingConstraints,RtlHardcoded" />
+
+        <Button
+            android:id="@+id/donar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="128dp"
+            android:background="@drawable/boton_border_circle"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="@string/donar"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/donacion_text" />
+
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>

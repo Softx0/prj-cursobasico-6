@@ -1,5 +1,6 @@
 package example.ingva.com.myapplication03;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,9 +13,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
-public class Idioma extends AppCompatActivity
+public class IdiomaActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    Button aceptar_idioma;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +27,29 @@ public class Idioma extends AppCompatActivity
         setContentView(R.layout.activity_idioma);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        aceptar_idioma = (Button) findViewById(R.id.aceptar_idioma);
+
+        intent = new Intent(Intent.ACTION_MAIN);
+        intent.setClassName("com.android.settings", "com.android.settings.LanguageSettings");
+
+        aceptar_idioma.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                startActivity(intent);
+            }
+        });
+
+
+
+
+
+
+
+
+
+
 
    /*     FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -76,28 +104,34 @@ public class Idioma extends AppCompatActivity
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
+    public boolean onNavigationItemSelected (MenuItem item){
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_accesibility) {
-            // Handle the camera action
-        } else if (id == R.id.nav_donation) {
+        Intent main = new Intent(getApplicationContext(),MainActivity.class);
+
+        if (id == R.id.nav_donation) {
+            FragmentsIds.setId("nav_donation");
 
         } else if (id == R.id.nav_help) {
+            FragmentsIds.setId("nav_help");
 
         } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
+            FragmentsIds.setId("nav_share");
 
         } else if (id == R.id.nav_about_us) {
+            FragmentsIds.setId("nav_about_us");
 
-        } else if (id == R.id.nav_comment){
+        } else if (id == R.id.nav_comment) {
+            FragmentsIds.setId("nav_comment");
 
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
+
+
+        startActivity(main);
+
         return true;
     }
 }

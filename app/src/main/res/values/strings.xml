@@ -4,11 +4,12 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
-    <string name="action_help">Help</string>
+    <string name="action_settings">Configuración</string>
+    <string name="action_help">Ayuda</string>
     <string name="contact_us">Contactanos</string>
-    <string name="more">More</string>
+    <string name="more">Mas</string>
 
+    <string name="peso_imc1">Peso:</string>
     <string name="about_us">Sobre Nosotros</string>
     <string name="accesibility">Accesibilidad</string>
     <string name="donation">Donacion</string>
@@ -27,11 +28,108 @@
     <string name="title_activity_aceesibilidad">Accesibilidad</string>
     <string name="title_activity_calcula_tu_peso_ideal">Calcula tu peso Ideal</string>
 
+    <string name="peso_imc">Peso:</string>
+    <string name="sexo_complexion">Sexo:</string>
+    <string name="titulo_complexion">Método de Complexión</string>
+    <string name="masculino_complex">Masculino</string>
+    <string name="femenino_complex">Femenino</string>
+    <string name="muñeca">Muñeca:</string>
+    <string name="estatura_complexion">Estatura:</string>
+    <string name="cm">CM</string>
+    <string name="_90">Ej: 20</string>
+    <string name="calcular_tu_peso">Calcular tu peso</string>
+
     <string name="metodo_imc">Metodo IMC</string>
     <string name="image_IMC">Image IMC</string>
     <string name="metodo_complex">Metodo Complexion</string>
     <string name="title_activity_imc">Indice Masa Corporal</string>
     <string name="title_activity_complexion">Metodo de Complexion</string>
     <string name="image02">image02</string>
+    <string name="ingresa_datos">Ingresa los siguientes datos:</string>
+    <string name="altura">Estatura:</string>
+    <string name="peso">Peso:</string>
+    <string name="calcular">Calcular tu peso</string>
+    <string name="tala_imc_status">Informacion IMC</string>
+    <string name="menor_a_18_5">Menor a 18,5:</string>
+    <string name="peso_insuficiente">Peso insuficiente</string>
+    <string name="_18_5_24_9">18,5–24,9:</string>
+    <string name="peso_normal">Peso normal</string>
+    <string name="_25_26_9">25–26,9:</string>
+    <string name="sobrepeso_grado_i">Sobrepeso grado I</string>
+    <string name="_27_29_9">27 – 29,9:</string>
+    <string name="preobesidad">Preobesidad</string>
+    <string name="_30_34_9">30 – 34,9:</string>
+    <string name="obesidad_leve">Obesidad leve</string>
+    <string name="_35_39_9">35 – 39,9:</string>
+    <string name="obesidad_moderada">Obesidad moderada</string>
+    <string name="_40_19_9">40 – 19,9:</string>
+    <string name="obesidad_m_rbida">Obesidad mórbida</string>
+    <string name="_50"><![CDATA[> 50:]]></string>
+    <string name="obesidad_extrema">Obesidad extrema</string>
+    <string name="m">M</string>
+    <string name="kg">KG</string>
+    <string name="mts">MTS</string>
+    <string name="compartir">Compartir</string>
+    <string name="seleccione_un_idioma">Seleccione un Idioma</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="idioma_idioma">Idioma:</string>
+    <string name="image_countries">image_countries</string>
+    <string name="image_splashscreen">image_splashscreen</string>
+    <string name="text_splash_screen">Calcula Tu Peso Ideal</string>
 
+    <string-array name="spinner_estatura_cm">
+        <item>Seleccione [cm]</item>
+        <item>1.50</item>
+        <item>1.52</item>
+        <item>1.54</item>
+        <item>1.56</item>
+        <item>1.58</item>
+        <item>1.60</item>
+        <item>1.62</item>
+        <item>1.64</item>
+        <item>1.66</item>
+        <item>1.68</item>
+        <item>1.70</item>
+        <item>1.72</item>
+        <item>1.74</item>
+        <item>1.76</item>
+        <item>1.78</item>
+        <item>1.80</item>
+        <item>1.82</item>
+        <item>1.84</item>
+        <item>1.86</item>
+        <item>1.88</item>
+        <item>1.90</item>
+        <item>1.92</item>
+        <item>1.94</item>
+    </string-array>
+
+    <string-array name="idiomas_select">
+        <item>[SELECCIONE]</item>
+        <item>[ESPAÑOL]</item>
+        <item>[ENGLISH]</item>
+        <item>[FRANCAIS]</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nosotros">Nosotros</string>
+    <string name="nosotros_text">Calcula tu peso, tiene la mision es la de iluminar los hogares y los centros de trabajo de nuestros clientes, en forma suficiente, económica y con productos de la mayor calidad, ajustados a los parámetros ecológicos y siempre en beneficio del menor consumo y mayor servicio de los usuarios finales.</string>
+    <string name="danos_comentario">Danos tu comentario</string>
+    <string name="lo_sentimos">Lo sentimos \n Queremos mejorerlo \n Agradecemos nos informe sobre</string>
+    <string name="describa">Describa su problema</string>
+    <string name="atras">Atras</string>
+    <string name="enviar_comentarios">Enviar comentarios</string>
+    <string name="ayuda_lorem">\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</string>
+    <string name="donacion">Donacion</string>
+    <string name="text_donacion">Ayudanos con tus donaciones y oraciones</string>
+    <string name="donacion_monto">Donacion:</string>
+    <string name="e_mail">E-mail:</string>
+    <string name="ej_50_000">Ej: 50 000 RD$</string>
+    <string name="ej_com">Ej: ****@****.com</string>
+    <string name="todo01">TODO</string>
+    <string name="todo02">TODO</string>
+    <string name="todo03">TODO</string>
+    <string name="donar">Donar</string>
+    <string name="todo04">TODO</string>
 </resources>

@@ -1,8 +1,7 @@
 package example.ingva.com.myapplication03;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,18 +11,37 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.ImageButton;
 
-public class imc extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class ElegirMetodoActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
+
+    ImageButton imageIMC, imageComplexion;
+    Button btn_imc1, btn_complex1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_imc);
+        setContentView(R.layout.activity_elegir_metodo);
+      //  setContentView(R.layout.content_elegir_metodo);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-/*
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
+        imageIMC = (ImageButton) findViewById(R.id.imageIMC);
+        imageIMC.setOnClickListener((View.OnClickListener) this);
+
+        btn_imc1 = (Button) findViewById(R.id.btn_imc1);
+        btn_imc1.setOnClickListener((View.OnClickListener) this);
+
+        imageComplexion = (ImageButton) findViewById(R.id.imageComplexion);
+        imageComplexion.setOnClickListener((View.OnClickListener) this);
+
+        btn_complex1 = (Button) findViewById(R.id.btn_complex1);
+        btn_complex1.setOnClickListener((View.OnClickListener) this);
+
+     /*     FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -76,28 +94,53 @@ public class imc extends AppCompatActivity
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
+    public boolean onNavigationItemSelected (MenuItem item){
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_accesibility) {
-            // Handle the camera action
-        } else if (id == R.id.nav_donation) {
+        Intent main = new Intent(getApplicationContext(),MainActivity.class);
+
+        if (id == R.id.nav_donation) {
+            FragmentsIds.setId("nav_donation");
 
         } else if (id == R.id.nav_help) {
+            FragmentsIds.setId("nav_help");
 
         } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
+            FragmentsIds.setId("nav_share");
 
         } else if (id == R.id.nav_about_us) {
+            FragmentsIds.setId("nav_about_us");
 
-        } else if (id == R.id.nav_comment){
+        } else if (id == R.id.nav_comment) {
+            FragmentsIds.setId("nav_comment");
 
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
+
+
+        startActivity(main);
+
         return true;
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+
+            case R.id.imageIMC:
+            case R.id.btn_imc1:
+                Intent intent_imageIMC = new Intent(ElegirMetodoActivity.this, ImcActivity.class);
+                startActivity(intent_imageIMC);
+                break;
+
+            case R.id.imageComplexion:
+            case R.id.btn_complex1:
+                Intent intent_imageComplex = new Intent(ElegirMetodoActivity.this, ComplexionActivity.class);
+                startActivity(intent_imageComplex);
+                break;
+
+        }
     }
 }
