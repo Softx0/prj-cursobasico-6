@@ -22,7 +22,7 @@ Just clone the proyect and run it with Android Studio.
 
 ## Maked with ♥ by
 
-* **JJefferson Benzan Tapia** - [JeffersonBenzan](https://github.com/JeffersonBenzan)
+* **Jefferson Benzan Tapia** - [JeffersonBenzan](https://github.com/JeffersonBenzan)
 * **Emmanuel Valenzuela** - [Softx0](https://github.com/Softx0)
 
 See also the list of [contributors](https://github.com/Softx0/AndroidAltice/contributors) who participated in this project.
