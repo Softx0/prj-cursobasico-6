@@ -17,9 +17,6 @@ Just clone the proyect and run it with Android Studio.
 * [Java](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * [Android Studio](https://developer.android.com/studio/index.html?hl=es-419)
 
-## Versions
-
-
 ## Maked with ♥ by
 
 * **Jefferson Benzan Tapia** - [JeffersonBenzan](https://github.com/JeffersonBenzan)
