@@ -17,6 +17,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -31,16 +32,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-/*
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-*/
+
         drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -49,6 +41,29 @@ public class MainActivity extends AppCompatActivity
 
         navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+
+        switch (FragmentsIds.getId()){
+            case "nav_about_us":
+                fragmentManager.beginTransaction().replace(R.id.app_bar_main, new SobreNosotrosFragment()).commit();
+                break;
+            case "nav_comment":
+                fragmentManager.beginTransaction().replace(R.id.app_bar_main, new EnviarComentarioFragment()).commit();
+                break;
+
+            case "nav_help":
+                fragmentManager.beginTransaction().replace(R.id.app_bar_main, new AyudaFragment()).commit();
+
+                break;
+            default:
+                Toast.makeText(this,"No se mando nada",Toast.LENGTH_LONG).show();
+                break;
+        }
+
+
+
     }
 
     @Override
@@ -89,15 +104,19 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_comment) {
-            // Handle the camera action
-        } else if (id == R.id.nav_donation) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        if (id == R.id.nav_donation) {
 
         } else if (id == R.id.nav_help) {
+            fragmentManager.beginTransaction().replace(R.id.app_bar_main, new AyudaFragment()).commit();
 
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_about_us) {
+            fragmentManager.beginTransaction().replace(R.id.app_bar_main, new SobreNosotrosFragment()).commit();
+
+        } else if (id == R.id.nav_comment){
+            fragmentManager.beginTransaction().replace(R.id.app_bar_main, new EnviarComentarioFragment()).commit();
 
         }
 
@@ -109,35 +128,27 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onClick(View view) {
         switch(view.getId()){
-
             case R.id.boton_calcula:
                 Intent btn_calcula = new Intent(MainActivity.this, Elegir_metodo.class);
                 startActivity(btn_calcula);
                 break;
-
             case R.id.boton_idioma:
                 Intent btn_idioma = new Intent(MainActivity.this, Idioma.class);
                 startActivity(btn_idioma);
                 break;
-
             case R.id.boton_configuracion:
                 Intent btn_configuracion = new Intent(MainActivity.this, Configuracion.class);
                 startActivity(btn_configuracion);
                 break;
-
             case R.id.boton_accesibilidad:
                 Intent btn_accesibilidad = new Intent(MainActivity.this, Aceesibilidad.class);
                 startActivity(btn_accesibilidad);
                 break;
         }
      /*   android.app.FragmentManager mfragmentManager = getFragmentManager();
-
         FragmentTransaction transaction = mfragmentManager.beginTransaction();
-
         chooseMethod chooseMethod = new chooseMethod();
-
         transaction.add(R.layout.content_main, chooseMethod);
         transaction.commit();*/
-    }
-
+}
 
