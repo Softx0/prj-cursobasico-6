@@ -1,11 +1,13 @@
 package example.ingva.com.myapplication03;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -1263,24 +1265,39 @@ public class complexion extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        Intent main = new Intent(getApplicationContext(),MainActivity.class);
+
         if (id == R.id.nav_accesibility) {
+            FragmentsIds.setId("nav_accesibility");
+
             // Handle the camera action
         } else if (id == R.id.nav_donation) {
+            FragmentsIds.setId("nav_donation");
 
         } else if (id == R.id.nav_help) {
+            FragmentsIds.setId("nav_help");
 
         } else if (id == R.id.nav_share) {
+            FragmentsIds.setId("nav_share");
 
         } else if (id == R.id.nav_send) {
+            FragmentsIds.setId("nav_send");
 
         } else if (id == R.id.nav_about_us) {
+            FragmentsIds.setId("nav_about_us");
 
-        } else if (id == R.id.nav_comment){
+
+        } else if (id == R.id.nav_comment) {
+            FragmentsIds.setId("nav_comment");
 
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
+
+
+        startActivity(main);
+
         return true;
+
     }
 }
