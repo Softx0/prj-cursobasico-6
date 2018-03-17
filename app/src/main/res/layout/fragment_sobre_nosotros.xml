@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/layout_linear"
+        android:background="@color/color_back_nav"
         >
 
         <ImageView
@@ -19,8 +20,8 @@
             android:layout_height="176dp"
             android:layout_gravity="center"
 
-            android:layout_marginTop="8dp"
-            android:contentDescription="TODO"
+            android:layout_marginTop="76dp"
+            android:contentDescription="@string/todo"
             android:cropToPadding="true"
             android:src="@drawable/nosotros"
             app:layout_constraintEnd_toEndOf="parent"
@@ -54,7 +55,6 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:autoText="false"
             android:gravity="center_horizontal|center|fill"
             android:paddingLeft="@dimen/activity_horizontal_margin"
             android:paddingRight="@dimen/activity_horizontal_margin"

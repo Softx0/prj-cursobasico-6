@@ -3,14 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="example.ingva.com.myapplication03.AyudaFragment">
+    tools:context="example.ingva.com.myapplication03.AyudaFragment"
+    android:background="@color/color_back_nav">
 
     <!-- TODO: Update blank fragment layout -->
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/frame_aiuda">
+        android:id="@+id/frame_aiuda"
+        android:background="@color/color_back_nav">
 
 
         <ImageView
@@ -20,9 +22,9 @@
             android:layout_gravity="top|center"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="52dp"
             android:adjustViewBounds="true"
-            android:contentDescription="TODO"
+            android:contentDescription="@string/todo"
             android:cropToPadding="false"
             android:src="@drawable/ayuda"
             app:layout_constraintEnd_toEndOf="parent"

@@ -121,4 +121,15 @@
     <string name="atras">Atras</string>
     <string name="enviar_comentarios">Enviar comentarios</string>
     <string name="ayuda_lorem">\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</string>
+    <string name="donacion">Donacion</string>
+    <string name="text_donacion">Ayudanos con tus donaciones y oraciones</string>
+    <string name="donacion_monto">Donacion:</string>
+    <string name="e_mail">E-mail:</string>
+    <string name="ej_50_000">Ej: 50 000 RD$</string>
+    <string name="ej_com">Ej: ****@****.com</string>
+    <string name="todo01">TODO</string>
+    <string name="todo02">TODO</string>
+    <string name="todo03">TODO</string>
+    <string name="donar">Donar</string>
+    <string name="todo04">TODO</string>
 </resources>

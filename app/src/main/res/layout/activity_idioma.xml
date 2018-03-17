@@ -8,6 +8,7 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start"
     tools:context=".LocalizationUpdaterActivity"
+    android:background="@color/color_back_nav"
     >
 
     <include
@@ -79,7 +80,7 @@
                 android:id="@+id/idioma"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="44dp"
                 android:gravity="center"
                 android:text="@string/idioma_idioma"

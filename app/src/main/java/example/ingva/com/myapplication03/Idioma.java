@@ -13,9 +13,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 public class Idioma extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    Button aceptar_idioma;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +28,18 @@ public class Idioma extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        aceptar_idioma = (Button) findViewById(R.id.aceptar_idioma);
 
+        intent = new Intent(Intent.ACTION_MAIN);
+        intent.setClassName("com.android.settings", "com.android.settings.LanguageSettings");
+
+        aceptar_idioma.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                startActivity(intent);
+            }
+        });
 
 
 

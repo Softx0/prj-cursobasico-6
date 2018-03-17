@@ -148,15 +148,17 @@ public class Calcula_tu_peso_ideal extends AppCompatActivity
             startActivity(btn_idioma);
             break;
 
-            case R.id.boton_configuracion:
-            Intent btn_configuracion = new Intent(Calcula_tu_peso_ideal.this, Configuracion.class);
-            startActivity(btn_configuracion);
-            break;
+           case R.id.boton_configuracion:
+               Intent btn_configuracion = new Intent(Calcula_tu_peso_ideal.this, MainActivity.class);
+               FragmentsIds.setId("null");
+               startActivity(btn_configuracion);
+               break;
 
-            case R.id.boton_accesibilidad:
-            Intent btn_accesibilidad = new Intent(Calcula_tu_peso_ideal.this, Aceesibilidad.class);
-            startActivity(btn_accesibilidad);
-            break;
+           case R.id.boton_accesibilidad:
+               Intent btn_accesibilidad = new Intent(Calcula_tu_peso_ideal.this, MainActivity.class);
+               FragmentsIds.setId("null");
+               startActivity(btn_accesibilidad);
+               break;
         }
         }
     }

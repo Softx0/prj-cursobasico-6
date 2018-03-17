@@ -57,8 +57,12 @@ public class MainActivity extends AppCompatActivity
                 fragmentManager.beginTransaction().replace(R.id.app_bar_main, new AyudaFragment()).commit();
 
                 break;
+            case "nav_donation":
+                fragmentManager.beginTransaction().replace(R.id.app_bar_main, new DonacionFragment()).commit();
+
+                break;
             default:
-                Toast.makeText(this,"No se mando nada",Toast.LENGTH_LONG).show();
+                fragmentManager.beginTransaction().replace(R.id.app_bar_main, new ConstruccionFragment()).commit();
                 break;
         }
 
@@ -106,6 +110,7 @@ public class MainActivity extends AppCompatActivity
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         if (id == R.id.nav_donation) {
+            fragmentManager.beginTransaction().replace(R.id.app_bar_main, new DonacionFragment()).commit();
 
         } else if (id == R.id.nav_help) {
             fragmentManager.beginTransaction().replace(R.id.app_bar_main, new AyudaFragment()).commit();
