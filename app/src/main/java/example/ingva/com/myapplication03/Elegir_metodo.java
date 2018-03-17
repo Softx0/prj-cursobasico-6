@@ -100,7 +100,7 @@ public class Elegir_metodo extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_accesibility) {
+        if (id == R.id.nav_comment) {
             // Handle the camera action
         } else if (id == R.id.nav_donation) {
 
@@ -108,11 +108,7 @@ public class Elegir_metodo extends AppCompatActivity
 
         } else if (id == R.id.nav_share) {
 
-        } else if (id == R.id.nav_send) {
-
         } else if (id == R.id.nav_about_us) {
-
-        } else if (id == R.id.nav_comment){
 
         }
 

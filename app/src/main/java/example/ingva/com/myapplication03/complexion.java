@@ -1,5 +1,6 @@
 package example.ingva.com.myapplication03;
 
+import android.annotation.SuppressLint;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -43,21 +44,22 @@ public class complexion extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_complexion);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         calcular_complexion = (Button) findViewById(R.id.calcular_complexion);
         editText_complexion = (EditText) findViewById(R.id.editText_complexion);
         radio_group_complex = (RadioGroup) findViewById(R.id.radio_group_complex);
-        spinner = (Spinner) findViewById(R.id.my_spinner);
 
-        for (int i = 0; i <= 44; i++){
+        for (int i = 0; i <= 100; i++){
             estatura[i] = (float)(i + 150.00)/100 ;
         }
+
+        spinner = (Spinner) findViewById(R.id.my_spinner);
         ArrayAdapter<Float> adapterEstatura = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, estatura);
         adapterEstatura.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapterEstatura);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        spinner.setAdapter(adapterEstatura);
 
     /*    FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -68,20 +70,23 @@ public class complexion extends AppCompatActivity
             }
         });*/
         calcular_complexion.setOnClickListener(new View.OnClickListener(){
+            @SuppressLint({"WrongConstant", "DefaultLocale"})
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
             public void onClick(View view) {
+
+             //RadioButton Settings
+
                 radioButton = radio_group_complex.getCheckedRadioButtonId();
-
                 radioButtonView = radio_group_complex.findViewById(radioButton);
-
                 indice = radio_group_complex.indexOfChild(radioButtonView);
-
                 RadioButton mRadioButton = (RadioButton) radio_group_complex.getChildAt(indice);
 
                 String text = mRadioButton.getText().toString();
 
-                StringBuilder texto = new StringBuilder();
+             //Spinner Settings
+             //StringBuilder texto = new StringBuilder();
+
                 float altura = Float.valueOf(spinner.getSelectedItem().toString());
 
                 altura *= 100;
@@ -1263,7 +1268,7 @@ public class complexion extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_accesibility) {
+        if (id == R.id.nav_comment) {
             // Handle the camera action
         } else if (id == R.id.nav_donation) {
 
@@ -1271,11 +1276,7 @@ public class complexion extends AppCompatActivity
 
         } else if (id == R.id.nav_share) {
 
-        } else if (id == R.id.nav_send) {
-
         } else if (id == R.id.nav_about_us) {
-
-        } else if (id == R.id.nav_comment){
 
         }
 

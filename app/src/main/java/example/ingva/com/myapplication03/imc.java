@@ -127,7 +127,7 @@ public class imc extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_accesibility) {
+        if (id == R.id.nav_comment) {
             // Handle the camera action
         } else if (id == R.id.nav_donation) {
 
@@ -135,11 +135,7 @@ public class imc extends AppCompatActivity
 
         } else if (id == R.id.nav_share) {
 
-        } else if (id == R.id.nav_send) {
-
         } else if (id == R.id.nav_about_us) {
-
-        } else if (id == R.id.nav_comment){
 
         }
 
@@ -154,10 +150,13 @@ public class imc extends AppCompatActivity
         StringBuilder text = new StringBuilder();
 
         float altura = Float.valueOf(alturaSpinner.getSelectedItem().toString());
+
         int peso = Integer.valueOf(pesoSpinner.getSelectedItem().toString());
+
         float imc = peso/(altura*altura);
         text.append("Su IMC es: ");
         text.append(String.format("%.2f", imc));
+
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         //Uncomment the below code to Set the message and title from the strings.xml file
@@ -171,7 +170,7 @@ public class imc extends AppCompatActivity
                         finish();
                     }
                 }).setView(layout_table_imc)
-                .setNeutralButton("Atras", new DialogInterface.OnClickListener() {
+                .setNeutralButton("Atrás", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         finish();
@@ -179,8 +178,5 @@ public class imc extends AppCompatActivity
                 })
                 .setTitle("Indice de masa corporal");
         builder.show();
-
-
-
     }
 }

@@ -4,8 +4,8 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
-    <string name="action_help">Help</string>
+    <string name="action_settings">Configuración</string>
+    <string name="action_help">Ayuda</string>
     <string name="contact_us">Contactanos</string>
     <string name="more">More</string>
 
@@ -36,7 +36,7 @@
     <string name="muñeca">Muñeca:</string>
     <string name="estatura_complexion">Estatura:</string>
     <string name="cm">CM</string>
-    <string name="_90">ej: 90</string>
+    <string name="_90">Ej: 20</string>
     <string name="calcular_tu_peso">Calcular tu peso</string>
 
     <string name="metodo_imc">Metodo IMC</string>
@@ -68,6 +68,8 @@
     <string name="obesidad_extrema">Obesidad extrema</string>
     <string name="m">M</string>
     <string name="kg">KG</string>
+    <string name="mts">MTS</string>
+    <string name="compartir">Compartir</string>
 
     <string-array name="spinner_estatura_cm">
         <item>Seleccione [cm]</item>

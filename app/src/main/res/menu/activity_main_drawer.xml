@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn="navigation_view">
+    tools:showIn="navigation_view"
+    >
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single"
 
-        <item
-            android:id="@+id/nav_accesibility"
-            android:icon="@drawable/accessibility"
-            android:title="@string/accesibility" />
+        >
+
         <item
             android:id="@+id/nav_donation"
             android:icon="@drawable/donation1"
-            android:title="@string/donation" />
+            android:title="@string/donation"
+            android:iconTint="@color/colorPrimary"
+            tools:targetApi="o" />
         <item
             android:id="@+id/nav_help"
             android:icon="@drawable/help"
-            android:title="@string/help" />
+            android:title="@string/help"
+            android:iconTint="@color/colorPrimary"
+            tools:targetApi="o"/>
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_menu_share"
+            android:title="@string/compartir"
+            android:iconTint="@color/colorPrimary"
+            tools:targetApi="o"/>
+        <item
+            android:id="@+id/nav_comment"
+            android:icon="@drawable/comment1"
+            android:title="@string/comments"
+            android:iconTint="@color/colorPrimary"
+            tools:targetApi="o"/>
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/user2"
+            android:title="@string/about_us"
+            android:iconTint="@color/colorPrimary"
+            tools:targetApi="o"/>
 
     </group>
-
-    <item android:title="Communicate y Comparte">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
-            <item
-                android:id="@+id/nav_about_us"
-                android:icon="@drawable/user2"
-                android:title="@string/about_us" />
-            <item
-                android:id="@+id/nav_comment"
-                android:icon="@drawable/comment1"
-                android:title="@string/comments" />
-        </menu>
-    </item>
 
 </menu>

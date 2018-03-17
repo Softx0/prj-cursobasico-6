@@ -104,11 +104,11 @@ public class Calcula_tu_peso_ideal extends AppCompatActivity
 
         @SuppressWarnings("StatementWithEmptyBody")
         @Override
-        public boolean onNavigationItemSelected (MenuItem item){
+        public boolean onNavigationItemSelected(MenuItem item) {
             // Handle navigation view item clicks here.
             int id = item.getItemId();
 
-            if (id == R.id.nav_accesibility) {
+            if (id == R.id.nav_comment) {
                 // Handle the camera action
             } else if (id == R.id.nav_donation) {
 
@@ -116,11 +116,7 @@ public class Calcula_tu_peso_ideal extends AppCompatActivity
 
             } else if (id == R.id.nav_share) {
 
-            } else if (id == R.id.nav_send) {
-
             } else if (id == R.id.nav_about_us) {
-
-            } else if (id == R.id.nav_comment) {
 
             }
             DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

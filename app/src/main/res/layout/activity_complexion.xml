@@ -77,18 +77,19 @@
             android:id="@+id/cm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="48dp"
             android:gravity="center"
             android:text="@string/cm"
             android:textColor="@color/black_nigga"
-            android:textColorHint="@color/colorAccent"
+            android:textColorHint="@color/colorPrimary"
             android:textSize="15sp"
             android:textStyle="italic|bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.2"
-            app:layout_constraintStart_toEndOf="@+id/my_spinner"
-            app:layout_constraintTop_toBottomOf="@+id/editText_complexion"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/editText_complexion"
+            app:layout_constraintTop_toBottomOf="@+id/radio_group_complex"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -100,7 +101,7 @@
             android:gravity="center"
             android:text="@string/estatura_complexion"
             android:textColor="@color/black_nigga"
-            android:textColorHint="@color/colorAccent"
+            android:textColorHint="@color/colorPrimary"
             android:textSize="25sp"
             android:textStyle="italic|bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -147,6 +148,25 @@
             app:layout_constraintTop_toBottomOf="@+id/editText_complexion"
             tools:ignore="MissingConstraints" />
 
+        <TextView
+            android:id="@+id/mts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="36dp"
+            android:gravity="center"
+            android:text="@string/mts"
+            android:textColor="@color/black_nigga"
+            android:textColorHint="@color/colorPrimary"
+            android:textSize="15sp"
+            android:textStyle="italic|bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.714"
+            app:layout_constraintStart_toEndOf="@+id/my_spinner"
+            app:layout_constraintTop_toBottomOf="@+id/editText_complexion"
+            tools:ignore="MissingConstraints" />
+
         <EditText
             android:id="@+id/editText_complexion"
             android:layout_width="95dp"
@@ -158,6 +178,7 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:inputType="number"
+            android:gravity="center"
             android:maxLength="2"
             android:singleLine="true"
             app:layout_constraintEnd_toEndOf="parent"
@@ -165,22 +186,7 @@
             app:layout_constraintStart_toEndOf="@+id/peso_complexion"
             app:layout_constraintTop_toBottomOf="@+id/radio_group_complex"
             tools:ignore="MissingConstraints,RtlHardcoded" />
-<!--
-        <TextView
-            android:id="@+id/cm02"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="56dp"
-            android:gravity="center"
-            android:text="@string/cm"
-            android:textColor="@color/black_nigga"
-            android:textColorHint="@color/colorAccent"
-            android:textSize="15sp"
-            android:textStyle="italic"
-            app:layout_constraintStart_toEndOf="@+id/editText_complexion"
-            app:layout_constraintTop_toBottomOf="@+id/radio_group_complex"
-            tools:ignore="MissingConstraints" />
--->
+
         <TextView
             android:id="@+id/peso_complexion"
             android:layout_width="wrap_content"
@@ -190,7 +196,7 @@
             android:gravity="center"
             android:text="@string/muñeca"
             android:textColor="@color/black_nigga"
-            android:textColorHint="@color/colorAccent"
+            android:textColorHint="@color/colorPrimary"
             android:textSize="25sp"
             android:textStyle="italic|bold"
             app:layout_constraintStart_toStartOf="parent"
